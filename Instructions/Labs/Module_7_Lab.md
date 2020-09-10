@@ -38,13 +38,13 @@ Estimated Time: 60 minutes
 
 ## Lab Files
 
--  \\\\AZ303\\AllFiles\\Labs\\11\\azuredeploy30311suba.json
+-  C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\11\\azuredeploy30311suba.json
 
--  \\\\AZ303\\AllFiles\\Labs\\11\\azuredeploy30311rga.json
+-  C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\11\\azuredeploy30311rga.json
 
--  \\\\AZ303\\AllFiles\\Labs\\11\\azuredeploy30311rga.parameters.json
+-  C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\11\\azuredeploy30311rga.parameters.json
 
--  \\\\AZ303\\AllFiles\\Labs\\11\\roledefinition30311.json
+-  C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\11\\roledefinition30311.json
 
 
 ## Instructions
@@ -84,9 +84,9 @@ The main tasks for this exercise are as follows:
 
       > **Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
 
-1. From the Cloud Shell pane, upload the Azure Resource Manager template **\\\\AZ303\\AllFiles\Labs\\11\\azuredeploy30311rga.json**.
+1. From the Cloud Shell pane, upload the Azure Resource Manager template **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\11\\azuredeploy30311rga.json**.
 
-1. From the Cloud Shell pane, upload the Azure Resource Manager parameter file **\\\\AZ303\\AllFilesLabs\\11\\azuredeploy30311rga.parameters.json**.
+1. From the Cloud Shell pane, upload the Azure Resource Manager parameter file **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\11\\azuredeploy30311rga.parameters.json**.
 
 1. From the Cloud Shell pane, run the following to deploy a Azure VM running Windows Server 2019 that you will be using in this lab:
 
@@ -166,7 +166,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Create a custom RBAC role in an Azure AD tenant
 
-1. On the lab computer, open the file **\\\\AZ303\\AllFiles\\Labs\\11\\roledefinition30311.json** and review its content:
+1. On the lab computer, open the file **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\11\\roledefinition30311.json** and review its content:
 
    ```json
    {
@@ -189,7 +189,7 @@ The main tasks for this exercise are as follows:
 
 1. On the lab computer, in the browser window displaying the Azure portal, start a **PowerShell** session within the **Cloud Shell**. 
 
-1. From the Cloud Shell pane, upload the Azure Resource Manager template **\\\\AZ303\\AllFiles\\Labs\\11\\roledefinition30311.json** into the home directory.
+1. From the Cloud Shell pane, upload the Azure Resource Manager template **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\11\\roledefinition30311.json** into the home directory.
 
 1. From the Cloud Shell pane, run the following to replace the `SUBSCRIPTION_ID` placeholder with the ID value of the Azure subscription:
 
