@@ -57,21 +57,21 @@ Estimated Time: 120 minutes
 
 ## Lab Files
 
--  \\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301suba.json
+-  C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301suba.json
 
--  \\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301rga.json
+-  C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301rga.json
 
--  \\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301rga.parameters.json
+-  C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301rga.parameters.json
 
--  \\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301rgb.json
+-  C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301rgb.json
 
--  \\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301rgb.parameters.json
+-  C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301rgb.parameters.json
 
--  \\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301rgc.json
+-  C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301rgc.json
 
--  \\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301rgc.parameters.json
+-  C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301rgc.parameters.json
 
--  \\AZ303\\AllFiles\\Labs\\01\\az30301e-configure_VMSS_with_data_disk.ps1
+-  C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\az30301e-configure_VMSS_with_data_disk.ps1
 
 
 ## Instructions
@@ -117,9 +117,9 @@ The main tasks for this exercise are as follows:
 
       > **Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
 
-1. From the Cloud Shell pane, upload the Azure Resource Manager template **\\\\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301rga.json**.
+1. From the Cloud Shell pane, upload the Azure Resource Manager template **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301rga.json**.
 
-1. From the Cloud Shell pane, upload the Azure Resource Manager parameter file **\\\\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301rga.parameters.json**.
+1. From the Cloud Shell pane, upload the Azure Resource Manager parameter file **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301rga.parameters.json**.
 
 1. From the Cloud Shell pane, run the following to deploy an Azure Load Balancer Basic with its backend pool consisting of a pair of Azure VMs hosting Windows Server 2019 Datacenter Core into the same availability set:
 
@@ -269,7 +269,7 @@ The main tasks for this exercise are as follows:
 
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**. 
 
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu select **Upload**, and upload the file **\\\\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301subb.json** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu select **Upload**, and upload the file **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301subb.json** into the Cloud Shell home directory.
 
 1. From the Cloud Shell pane, run the following to create a resource groups (replace the `<Azure region>` placeholder with the name of the Azure region that is available in your subscription and which is closest to the location of your lab computer):
 
@@ -281,9 +281,9 @@ The main tasks for this exercise are as follows:
    --parameters rgName=az30301b-labRG rgLocation=$LOCATION
    ```
 
-1. From the Cloud Shell pane, upload the Azure Resource Manager template **\\\\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301rgb.json**.
+1. From the Cloud Shell pane, upload the Azure Resource Manager template **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301rgb.json**.
 
-1. From the Cloud Shell pane, upload the Azure Resource Manager parameter file **\\\\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301rgb.parameters.json**.
+1. From the Cloud Shell pane, upload the Azure Resource Manager parameter file **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301rgb.parameters.json**.
 
 1. From the Cloud Shell pane, run the following to deploy an Azure Load Balancer Standard with its backend pool consisting of a pair of Azure VMs hosting Windows Server 2019 Datacenter Core across two availability zones:
 
@@ -437,28 +437,6 @@ The main tasks for this exercise are as follows:
 
 1. Review the output and verify that it matches the public IP address assigned to the frontend of the Azure Load Balancer Standard, which you assigned to the outbound load balancing rule.
 
-
-#### Task 3: Remove Azure resources deployed in the exercise
-
-1. In the Azure portal, start a new **Bash** session in the Cloud Shell pane. 
-
-1. From the Cloud Shell pane, run the following to list the resource group you created in this exercise:
-
-   ```sh
-   az group list --query "[?starts_with(name,'az30301b-')]".name --output tsv
-   ```
-
-    > **Note**: Verify that the output contains only the resource group you created in this lab. This group will be deleted in this task.
-
-1. From the Cloud Shell pane, run the following to delete the resource group you created in this lab
-
-   ```sh
-   az group list --query "[?starts_with(name,'az30301b-')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
-   ```
-
-1. Close the Cloud Shell pane.
-
-
 ### Exercise 3: Implement and analyze highly available Azure VM Scale Set deployments using availability zones and Azure Application Gateway.
   
 The main tasks for this exercise are as follows:
@@ -476,7 +454,7 @@ The main tasks for this exercise are as follows:
 
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**. 
 
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu select **Upload**, and upload the file **\\\\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301subc.json** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu select **Upload**, and upload the file **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301subc.json** into the Cloud Shell home directory.
 
 1. From the Cloud Shell pane, run the following to create a resource groups (replace the `<Azure region>` placeholder with the name of the Azure region that is available in your subscription and which is closest to the location of your lab computer):
 
@@ -484,9 +462,9 @@ The main tasks for this exercise are as follows:
    az deployment sub create --location '<Azure region>' --template-file azuredeploy30301subc.json --parameters rgName=az30301c-labRG rgLocation='<Azure region>'
    ```
 
-1. From the Cloud Shell pane, upload the Azure Resource Manager template **\\\\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301rgc.json**.
+1. From the Cloud Shell pane, upload the Azure Resource Manager template **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301rgc.json**.
 
-1. From the Cloud Shell pane, upload the Azure Resource Manager parameter file **\\\\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301rgc.parameters.json**.
+1. From the Cloud Shell pane, upload the Azure Resource Manager parameter file **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301rgc.parameters.json**.
 
 1. From the Cloud Shell pane, run the following to deploy an Azure Application Gateway with its backend pool consisting of a pair of Azure VMs hosting Windows Server 2019 Datacenter Core across different availability zones:
 
@@ -709,7 +687,7 @@ The main tasks for this exercise are as follows:
 
 1. On the **scripts** blade, select **Upload**.
 
-1. On the **Upload blob** blade, select the folder icon, in the **Open** dialog box, navigate to the **\\\\AZ303\\AllFiles\\Labs\\01** folder, select **az30301e-configure_VMSS_with_data_disk.ps1**, select **Open**, and back on the **Upload blob** blade, select **Upload**. 
+1. On the **Upload blob** blade, select the folder icon, in the **Open** dialog box, navigate to the **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01** folder, select **az30301e-configure_VMSS_with_data_disk.ps1**, select **Open**, and back on the **Upload blob** blade, select **Upload**. 
 
 1. In the Azure portal, navigate back to the **az30301c-vmss** virtual machine scale set blade. 
 
