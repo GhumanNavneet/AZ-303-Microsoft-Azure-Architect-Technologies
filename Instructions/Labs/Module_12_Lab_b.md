@@ -85,12 +85,10 @@ The main tasks for this exercise are as follows:
    export LOCATION='<Azure region>'
    ```
 
-1. From the Cloud Shell pane, run the following to create a resource group that will host all resources that you will provision in this lab:
+1. From the Cloud Shell pane, run the following to create a variable storing the value of resource group that will host all resources that you will provision in this lab:
 
    ```sh
    export RESOURCE_GROUP_NAME='az30309a-labRG'
-
-   az group create --name "${RESOURCE_GROUP_NAME}" --location "$LOCATION"
    ```
 
 1. From the Cloud Shell pane, run the following to create an Azure Storage account that will host container with blobs to be processed by the Azure function:
