@@ -727,27 +727,3 @@ The main tasks for this exercise are as follows:
 
     > **Note**: You might need to refresh the **az30301c-vmss \| Instances** blade.
 
-
-#### Task 3: Remove Azure resources deployed in the exercise
-
-1. From the Cloud Shell pane, run the following to list the resource group you created in this exercise:
-
-   ```sh
-   az group list --query "[?starts_with(name,'az30301c-')]".name --output tsv
-   ```
-
-    > **Note**: Verify that the output contains only the resource group you created in this lab. This group will be deleted in this task.
-
-1. From the Cloud Shell pane, run the following to delete the resource group you created in this lab
-
-   ```sh
-   az group list --query "[?starts_with(name,'az30301c-')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
-   ```
-
-1. From the Cloud Shell pane, run the following to delete the file you uploaded earlier in this lab
-
-   ```sh
-   rm ~/azuredeploy30301suba.json
-   ```
-
-1. Close the Cloud Shell pane.
