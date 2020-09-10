@@ -41,7 +41,7 @@ Estimated Time: 120 minutes
 
 ## Lab Files
 
--  \\\\AZ303\\AllFiles\\Labs\\07\\azuredeploy30307suba.json
+-  C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\07\\azuredeploy30307suba.json
 
 
 ### Exercise 0: Prepare the lab environment
@@ -63,7 +63,7 @@ The main tasks for this exercise are as follows:
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**. 
 
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu select **Upload**, and upload the file **\\\\AZ303\\AllFiles\Labs\\07\\azuredeploy30307suba.json** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu select **Upload**, and upload the file **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\07\\azuredeploy30307suba.json** into the Cloud Shell home directory.
 
 1. From the Cloud Shell pane, run the following to create a resource groups (replace the `<Azure region>` placeholder with the name of the Azure region that is available for deployment of Azure VMs in your subscription and which is closest to the location of your lab computer):
 
