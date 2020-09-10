@@ -469,27 +469,3 @@ The main tasks for this exercise are as follows:
 
 1. Select **Folder1** and verify that **File1.txt** appears in the list of files.
 
-
-#### Task 3: Remove Azure resources deployed in the lab
-
-1. Within the Remote Desktop session to **az30302a-vm0**, in the browser window displaying the Azure portal, start a PowerShell session within the Cloud Shell pane.
-
-1. From the Cloud Shell pane, run the following to list the resource group you created in this exercise:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'az30302*'
-   ```
-
-    > **Note**: Verify that the output contains only the resource group you created in this lab. This group will be deleted in this task.
-
-1. From the Cloud Shell pane, run the following to delete the resource group you created in this lab
-
-   ```powershell
-   Get-AzResourceGroup -Name 'az30302*' | Remove-AzResourceGroup -Force -AsJob
-   ```
-
-1. Close the Cloud Shell pane.
-
-1. In the Azure portal, navigate to the **Users** blade of the Azure Active Directory tenant associated with your Azure subscription.
-
-1. In the list of user accounts, select the entry representing the **az30302auser1** user account, select the ellipsis icon in the toolbar, select **Delete user** and select **Yes** when prompted to confirm.  
