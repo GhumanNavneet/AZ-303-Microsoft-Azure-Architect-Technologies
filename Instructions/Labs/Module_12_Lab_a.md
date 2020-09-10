@@ -92,12 +92,11 @@ None
 
     >**Note**: Make sure to record the value of the username and the corresponding password.
 
-1. From the Cloud Shell pane, run the following to create the resource group which will host the App Service web app (replace the `<location>` placeholder with the name of the Azure region that is available in your subscription and which is closest to the location of your lab computer):
+1. From the Cloud Shell pane, run the following to create variables storing the values of location and resource group which will be used to host the App Service web app (replace the `<location>` placeholder with the name of the Azure region that is available in your subscription and which is closest to the location of your lab computer):
 
    ```sh
    LOCATION='<location>'
    RGNAME='az30305a-labRG'
-   az group create --location $LOCATION --resource-group $RGNAME
    ```
 
 1. From the Cloud Shell pane, run the following to create a new App Service plan:
@@ -159,7 +158,6 @@ None
     | --- | --- |
     | Name | **staging** |
     | Clone settings from | the name of the web app |
-
 
 ### Exercise 2: Manage App Service web app deployment slots
   
