@@ -235,16 +235,12 @@ The main tasks for this exercise are as follows:
    export PREFIX=$(echo `openssl rand -base64 5 | cut -c1-7 | tr '[:upper:]' '[:lower:]' | tr -cd '[[:alnum:]]._-'`)
    ```
 
-1. From the Cloud Shell pane, run the following to identify the Azure region hosting the target resource group and its existing resources: 
+1. From the Cloud Shell pane, run the following to identify the Azure region hosting the resources in the resource group: 
 
    ```sh
-   export RESOURCE_GROUP_NAME_EXISTING='az30309a-labRG'
+   export RESOURCE_GROUP_NAME='az30309a-labRG'
 
    export LOCATION=$(az group list --query "[?name == '${RESOURCE_GROUP_NAME_EXISTING}'].location" --output tsv)
-
-   export RESOURCE_GROUP_NAME='az30309b-labRG'
-
-   az group create --name "${RESOURCE_GROUP_NAME}" --location $LOCATION
    ```
 
 1. From the Cloud Shell pane, run the following to create an Azure Storage account that will host a container to be used by the Event Grid subscription that you will configure in this task:
