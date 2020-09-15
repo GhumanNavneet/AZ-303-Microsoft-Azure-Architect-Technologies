@@ -57,8 +57,6 @@ Estimated Time: 120 minutes
 
 ## Lab Files
 
--  C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301suba.json
-
 -  C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301rga.json
 
 -  C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301rga.parameters.json
