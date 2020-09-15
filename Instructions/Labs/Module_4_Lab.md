@@ -103,20 +103,6 @@ The main tasks for this exercise are as follows:
    az provider register --namespace 'Microsoft.Insights'
    ```
 
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu select **Upload**, and upload the file **\\\\AZ303\\AllFiles\\Labs\\01\\azuredeploy30301suba.json** into the Cloud Shell home directory.
-
-1. From the Cloud Shell pane, run the following to create a resource group (replace the `<Azure region>` placeholder with the name of the Azure region that is available for deployment of Azure VMs in your subscription and which is closest to the location of your lab computer):
-
-   ```sh
-   LOCATION='<Azure region>'
-   az deployment sub create \
-   --location $LOCATION \
-   --template-file azuredeploy30301suba.json \
-   --parameters rgName=az30301a-labRG rgLocation=$LOCATION
-   ```
-
-      > **Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
-
 1. From the Cloud Shell pane, upload the Azure Resource Manager template **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301rga.json**.
 
 1. From the Cloud Shell pane, upload the Azure Resource Manager parameter file **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301rga.parameters.json**.
@@ -233,25 +219,6 @@ The main tasks for this exercise are as follows:
 1. Press the **Ctrl+C** key combination to return to the Bash shell prompt.
 
 
-#### Task 3: Remove Azure resources deployed in the exercise
-
-1. From the Cloud Shell pane, run the following to list the resource group you created in this exercise:
-
-   ```sh
-   az group list --query "[?starts_with(name,'az30301a-')]".name --output tsv
-   ```
-
-    > **Note**: Verify that the output contains only the resource group you created in this lab. This group will be deleted in this task.
-
-1. From the Cloud Shell pane, run the following to delete the resource group you created in this lab
-
-   ```sh
-   az group list --query "[?starts_with(name,'az30301a-')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
-   ```
-
-1. Close the Cloud Shell pane.
-
-
 ### Exercise 2: Implement and analyze highly available Azure VM deployments using availability zones and Azure Load Balancer Standard
   
 The main tasks for this exercise are as follows:
@@ -268,18 +235,6 @@ The main tasks for this exercise are as follows:
 1. If needed, in the Azure portal, open **Cloud Shell** pane by selecting on the toolbar icon directly to the right of the search textbox.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**. 
-
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu select **Upload**, and upload the file **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301subb.json** into the Cloud Shell home directory.
-
-1. From the Cloud Shell pane, run the following to create a resource groups (replace the `<Azure region>` placeholder with the name of the Azure region that is available in your subscription and which is closest to the location of your lab computer):
-
-   ```sh
-   LOCATION='<Azure region>'
-   az deployment sub create \
-   --location $LOCATION \
-   --template-file azuredeploy30301subb.json \
-   --parameters rgName=az30301b-labRG rgLocation=$LOCATION
-   ```
 
 1. From the Cloud Shell pane, upload the Azure Resource Manager template **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301rgb.json**.
 
@@ -455,12 +410,6 @@ The main tasks for this exercise are as follows:
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**. 
 
 1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu select **Upload**, and upload the file **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301subc.json** into the Cloud Shell home directory.
-
-1. From the Cloud Shell pane, run the following to create a resource groups (replace the `<Azure region>` placeholder with the name of the Azure region that is available in your subscription and which is closest to the location of your lab computer):
-
-   ```sh
-   az deployment sub create --location '<Azure region>' --template-file azuredeploy30301subc.json --parameters rgName=az30301c-labRG rgLocation='<Azure region>'
-   ```
 
 1. From the Cloud Shell pane, upload the Azure Resource Manager template **C:\\AllFiles\\AZ-303-Microsoft-Azure-Architect-Technologies-master\\AllFiles\\Labs\\01\\azuredeploy30301rgc.json**.
 
@@ -645,7 +594,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure Portal, on the **az30301c-vmss** blade, select **Size**.
 
-1. In the list of available sizes, select any available size other than currently configured and select **Resize**.
+1. In the list of available sizes, select **Standard_DS1_v2** size  and select **Resize**.
 
 1. On the **az30301c-vmss** blade, select the **Instances** entry and, on the **az30301c-vmss \| Instances** blade, observe the process of replacing existing instances with new ones of the desired size.
 
