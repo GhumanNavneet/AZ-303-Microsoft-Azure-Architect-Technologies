@@ -412,7 +412,7 @@ The main tasks for this exercise are as follows:
 1. On the **az30307a-vm1** replicated items blade, select **Latest recovery points** and review **Latest crash-consistent** and **Latest app-consistent** recovery points.
 
 
-#### Task 3: Perform a failover of the Hyper-V virtual machine
+#### Task 4: Perform a failover of the Hyper-V virtual machine
 
 1. Within the Remote Desktop session to **az30307a-vm0**, in the browser window displaying the Azure portal, on the **az30307a-vm1** replicated items blade, select **Test failover**. 
 
@@ -445,7 +445,7 @@ The main tasks for this exercise are as follows:
 1. Close the **Failover** blade.
 
 
-#### Task 4: Remove Azure resources deployed in the lab
+#### Task 5: Remove Azure resources deployed in the lab
 
 1. Within the Remote Desktop session to **az30307a-vm0**, in the browser window displaying the Azure portal, start a PowerShell session within the Cloud Shell pane.
 
