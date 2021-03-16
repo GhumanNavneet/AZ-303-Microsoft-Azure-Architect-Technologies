@@ -65,7 +65,7 @@ The main tasks for this exercise are as follows:
 
     ![](Images/lab9/Ex0_task1_step1.png)
 
-3. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
+3. If prompted to select either **Bash** or **PowerShell**, select **Bash**. 
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Show Advanced Settings**.
 
